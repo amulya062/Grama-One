@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAMAONE</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;
+700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,
+wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,
+100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A
+==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="background-color: rgb(222, 227, 222);">
+    <section class="sub-header" id="change">
+    <nav>
+            <a href="home.html"><img src="../images/logo.jpeg" height="100" width="100"></a>
+        <div class ="navv" id="navlink">
+            <i class="fa fa-window-close" onclick="hideMenu()"></i>
+           
+            <ul>
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="../about/new.html">NOTIFY</a></li>
+                <li><a href="./services.html">CONTACT</a></li>
+                <li><a href="../sologin/login.html">LOGIN</a></li>
+            </ul> 
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>CONTACT US</h1>
+</section>
+<!-- contact us -->
+ <section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8191757789104!2d77.5930385750766!3d12.983414587333098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae166f5a5be241%3A0x5cf5edad9525d232!2sSungard%20-%20ATS%2C%20Embassy%20Icon%2C%20Infantry%20Rd%2C%20Vasanth%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560051!5e0!3m2!1sen!2sin!4v1721049685674!5m2!1sen!2sin"
+     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </section>
+<section class="contact">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+            <i class="fa fa-home"></i>
+            <span>
+                <h5>Embassy Icon Building at Level 4,
+                    Infantry Road, </h5>
+                    <p>Bangalore-560001</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>080-44554455</h5>
+                        
+                    </span>
+                </div>
+        </div>
+        <div class="contact-col">
+            <form action="file.php" method="post">
+                <input type="text" name="name" placeholder="ENTER YOUR NAME" required>
+                <input type="email" name="email"placeholder="ENTER YOUR Email" required>
+                <input type="text" name="subject"placeholder="ENTER YOUR SUBJECT" required>
+                <textarea rows="8" name="message"placeholder="MESSAGE" required></textarea>
+                <button type="submit" class="butto" >SEND MESSAGE</button>
+            </form>
+        </div>
+ </div>
+</section>
+
+<script>
+    function googleTranslateElementInit(){
+        new google.translate.TranslateElement(
+            {pageLanguage:'en'},
+        'google_translate_element'  );
+    }
+</script>
+
+ <!-- footer -->
+   <section class="footer">
+    <h4 style="color: black;"> ABOUT    </h4>
+    <p>THIS PAGE IS JUST MADE NOW</p>
+    <p>@copywrite govt of Karnataka</p>
+  </section> 

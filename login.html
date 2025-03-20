@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./login.css">
+   
+</head>
+<body style="background-color: rgb(222, 227, 222);">
+    <section class="header">
+    <nav>
+            <a href="home.html"><img src="../images/logo.jpeg" height="100" width="100"></a>
+        <div class ="navv" id="navlink">
+            <i class="fa fa-window-close" onclick="hideMenu()"></i>
+            
+            <ul>
+                <li><a href="../mainn/home.html">HOME</a></li>
+                <li><a href="../mainn/about.html">ABOUT</a></li>
+                <li><a href="">NOTIFY</a></li>
+                <li><a href="../mainn/services.html">CONTACT</a></li>
+                <li><a href="../sologin/login.html">LOGIN</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+<section class="align">
+<div class="login-container">
+        <h2 data-key="LOGIN">Login</h2>
+        <form action="/login" method="post" id="loginForm">
+            <label for="username" data-key="USERNAME">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password" data-key="PASSWORD">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login" data-key="SUBMIT">
+    </form>
+</div>
+</section>
+<div class="language-switcher">
+    <button id="en-button">English</button>
+    <button id="kn-button">kannada</button>
+</div>
+<script>
+//     document.getElementById('loginForm').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Prevent the form from submitting the traditional way
+
+//     const username = document.getElementById('username').value;
+//     const password = document.getElementById('password').value;
+
+//     // Example credentials, replace with your own validation logic
+//     const validUsername = 'admin';
+//     const validPassword = 'pass123';
+
+//     if (username === validUsername && password === validPassword) {
+//         // Redirect to another page on successful login
+//         window.location.href = '../mainn/home.html';
+//     } else {
+//         alert('Invalid username or password');
+//     }
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Load translations
+    fetch('translations.json')
+        .then(response => response.json())
+        .then(data => {
+            window.translations = data;
+            switchLanguage('en'); // Default language
+        });
+
+    document.getElementById('en-button').addEventListener('click', function() {
+        switchLanguage('en');
+    });
+
+    document.getElementById('kn-button').addEventListener('click', function() {
+        switchLanguage('kn');
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Example credentials, replace with your own validation logic
+        const validUsername = 'admin';
+        const validPassword = 'pass123';
+
+        if (username === validUsername && password === validPassword) {
+            // Redirect to another page on successful login
+            window.location.href = '../mainn/home.html';
+        } else {
+            alert('Invalid username or password');
+        }
+    });
+});
+
+function switchLanguage(language) {
+    const elements = document.querySelectorAll('[data-key]');
+
+    elements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        element.textContent = window.translations[language][key];
+    });
+}
+
+</script>
+
+
+
+</body>
+</html>

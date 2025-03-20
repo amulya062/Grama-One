@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+@font-face {
+    font-family: pop;
+    src: url(./Fonts/Poppins-Medium.ttf);
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: pop;
+    flex-direction: column;
+}
+.head{
+    text-align: center;
+}
+.head_1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+}
+.head_1 span{
+    color: #ff4732;
+}
+.head_2{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 3px;
+}
+ul{
+    display: flex;
+    margin-top: 80px;
+}
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul li .icon{
+    font-size: 35px;
+    color: #ff4732;
+    margin: 0 60px;
+}
+ul li .text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff4732;
+}
+
+/* Progress Div Css  */
+
+ul li .progress{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(68, 68, 68, 0.781);
+    margin: 14px 0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 125px;
+    height: 5px;
+    background-color: rgba(68, 68, 68, 0.781);
+    right: 30px;
+}
+.one::after{
+    width: 0;
+    height: 0;
+}
+ul li .progress .uil{
+    display: none;
+}
+ul li .progress p{
+    font-size: 13px;
+}
+
+/* Active Css  */
+
+ul li .active{
+    background-color: #ff4732;
+    display: grid;
+    place-items: center;
+}
+li .active::after{
+    background-color: #ff4732;
+}
+ul li .active p{
+    display: none;
+}
+ul li .active .uil{
+    font-size: 20px;
+    display: flex;
+}
+
+/* Responsive Css  */
+
+@media (max-width: 980px) {
+    ul{
+        flex-direction: column;
+    }
+    ul li{
+        flex-direction: row;
+    }
+    ul li .progress{
+        margin: 0 30px;
+    }
+    .progress::after{
+        width: 5px;
+        height: 55px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .one::after{
+        height: 0;
+    }
+    ul li .icon{
+        margin: 15px 0;
+    }
+}
+
+@media (max-width:600px) {
+    .head .head_1{
+        font-size: 24px;
+    }
+    .head .head_2{
+        font-size: 16px;
+    }
+}
+/* the old one */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", serif;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(236, 236, 236, 0.7), rgba(1, 7, 28, 0.7)), url(../images/1.jpg);
+    background-position: center;
+    background-size: cover;
+    /* position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  } */
+}
+ nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+ }
+ /* nav a img {
+  align-items: center;
+  text-align: center;
+ } */
+ .navv{
+  flex: 1;
+  text-align: right;
+
+}
+ .navv ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  padding-left: 10%;
+  position: relative;
+  text-align: right;
+ }
+ .navv ul li a{
+  color: black;
+  text-decoration: double;
+  font-size: 20px;
+ }
+
+.navv ul li::after {
+content: '';
+width: 0%; 
+/* if width zero line below tetx hidden */
+height: 2px;
+background: #249f19;
+display: block;
+margin-inline-start: auto;
+transition: 0.5s;
+}
+.navv ul li:hover::after{
+  width: 100%;
+}
+/* textbox starting */
+.textbox{
+  width: 90%;
+  color: black;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  transform: trasnlate(-50%,-50%);
+  text-align: center;
+}
+.textbox h1{
+  font-size: 50px;
+}
+.textbox p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: rgb(236, 229, 229);
+}
+.butto{
+  display: inline-block;
+  text-decoration: solid;
+  color: rgb(25, 205, 64);
+  border: 5px solid black;
+  padding: 12px 15px;
+  font-size: 12pt;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.butto:hover{
+  border: 1px solid black;
+  background-color: azure;
+  transition: 1s;
+}
+nav .fa{
+  display: none;
+}
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(228, 228, 230, 0.7),rgba(91, 96, 117, 0.7)),url(../images/nature.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+  }
+  .sub-header h1{
+    margin-top: 100px;
+  }
+  .new{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+    list-style: disc;
+    padding-left: 30px;
+    list-style-type: disc; /* Ensure list circles are used */
+    padding-left: 10%; 
+  }
+/* .hey{
+padding-left: 10%;
+} */
+.about{
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.ab-col{
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+#google_translate_element {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensure it's on top */
+}

@@ -1,0 +1,14 @@
+{
+    "en": {
+        "LOGIN": "Login",
+        "USERNAME": "Username:",
+        "PASSWORD": "Password:",
+        "SUBMIT": "Login"
+    },
+    "kn": {
+        "LOGIN": "ಲಾಗಿನ್",
+        "USERNAME": "ಬಳಕೆದಾರ ಹೆಸರು:",
+        "PASSWORD": "ಗುಪ್ತಪದ:",
+        "SUBMIT": "ಲಾಗಿನ್"
+    }
+}
